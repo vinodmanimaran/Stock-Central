@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+
+$user-primary-color: #007bff;
+$user-secondary-color: #6c757d;
+$user-bg-color: #f5f5f5;
+
+$user-font-family: "Open Sans", sans-serif;
+$user-font-weight-light: 300;
+$user-font-weight-regular: 400;
+$user-font-weight-bold: 600;
+
+.user-profile {
+  font-family: $user-font-family;
+  font-weight: $user-font-weight-regular;
+  padding: 2rem;
+  max-width: 500px;
+  @media only screen and (max-width: 768px) {
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(to right, #fad0c4, #ffd1ff, #fad0c4);
+    @media only screen and (max-width: 768px) {
+      padding: 1rem;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .profile-picture {
+      margin-bottom: 2rem;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ccc;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .profile-details {
+      width: 100%;
+
+      p {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+
+        label {
+          margin-bottom: 0.5rem;
+          font-weight: $user-font-weight-bold;
+        }
+
+        input[type="text"],
+        textarea {
+          border: 2px solid $user-secondary-color;
+          border-radius: 0.25rem;
+          padding: 0.5rem;
+          font-family: inherit;
+          font-size: 1rem;
+          font-weight: $user-font-weight-light;
+          margin-top: 0.25rem;
+          transition: border-color 0.3s;
+
+          &:focus {
+            outline: none;
+            border-color: $user-primary-color;
+          }
+        }
+
+                input[type="file"] {
+                  display:block;
+                }
+        
+                .custom-file-upload {
+                  border: 1px solid #ccc;
+                  display: inline-block;
+                  padding: 6px 12px;
+                  cursor: pointer;
+                }
+        
+                .custom-file-upload:hover {
+                  background-color: #ddd;
+                }
+
+        code {
+          font-size: 0.8rem;
+          color: $user-secondary-color;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+
+    .--btn-primary {
+      background-color: $user-primary-color;
+      color: #fff;
+      border: none;
+      border-radius: 0.25rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      font-weight: $user-font-weight-bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+       
+      &:hover {
+        background-color: darken($user-primary-color, 10%);
+      }
+    }
+  }
+  
+
+}
+@media only screen and (max-width: 768px) {
+  .user-profile {
+    padding: 1rem;
+
+    .card {
+      padding: 1rem;
+      border-radius: 0;
+      box-shadow: none;
+
+      .profile-picture {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+// Mixins
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Styles
+.product-summary {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  padding: 1rem;
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .info-summary {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+
+    .info-box {
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 0.25rem;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .icon {
+        margin-bottom: 0.5rem;
+        color: $primary-color;
+      }
+
+      .title {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0;
+        color: $secondary-color;
+      }
+
+      .count {
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0;
+      }
+    }
+
+    .card1 {
+      background-color: #007bff;
+    }
+
+    .card2 {
+      background-color: #28a745;
+    }
+
+    .card3 {
+      background-color: #dc3545;
+    }
+
+    .card4 {
+      background-color: #ffc107;
+    }
+  }
+
+  // Media query for screens smaller than 768px
+  @media (max-width: 767px) {
+    .info-summary {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.profile {
+  background: linear-gradient(to bottom right, #FAD961, #F76B1C);
+  background-size: cover;
+
+  .card {
+    background: linear-gradient(to bottom, #FAD961, #F76B1C, #FFA07A);
+    max-width: 600px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem 0;
+    margin-left: 70px;
+    
+
+    span.profile-photo {
+      text-align: center;
+    }
+
+    img {
+      border-radius: 50%;
+      object-fit: cover;
+      width: 150px;
+      max-width: 350px;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      margin-top: 10px;
+    }
+
+    span.profile-data {
+      margin: 0 1rem;
+    }
+
+    span.profile-data>* {
+      border-top: 1px solid #ccc;
+      padding: 5px 0;
+    }
+  }
+}
+
+button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: blue;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darkblue;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.3);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    max-width: 100%;
+    margin: 15px 10px;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  span.profile-data {
+    margin: 1rem 0;
+    text-align: center;
+  }
+}

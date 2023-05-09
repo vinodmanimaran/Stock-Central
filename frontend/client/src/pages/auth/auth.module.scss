@@ -1,0 +1,121 @@
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      input {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        border: none;
+        background-color: #f5f5f5;
+
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      button {
+        padding: 1rem;
+        margin-top: 1rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        background-color: #2ecc71;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background-color: #27ae60;
+        }
+      }
+    }
+
+    a {
+      color: #2ecc71;
+      text-decoration: none;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: #27ae60;
+      }
+    }
+
+    .register {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      text-align: center;
+
+      a {
+        color: #2ecc71;
+        text-decoration: none;
+        margin-right: 0.5rem;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: #27ae60;
+        }
+      }
+    }
+  }
+
+  // Add Sass styles below
+
+  $primary-color: #2ecc71;
+  $primary-hover-color: #27ae60;
+
+  .form {
+    background-color: #f5f5f5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    form {
+      button {
+        background-color: $primary-color;
+
+        &:hover {
+          background-color: $primary-hover-color;
+        }
+      }
+    }
+
+    a {
+      color: $primary-color;
+
+      &:hover {
+        color: $primary-hover-color;
+      }
+    }
+  }
+}

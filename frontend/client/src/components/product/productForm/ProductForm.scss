@@ -1,0 +1,106 @@
+.add-product {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      margin-bottom: 15px;
+      transition: border-color 0.3s ease;
+
+      &:hover,
+      &:focus {
+        border-color: #008cba;
+      }
+    }
+
+    .image-preview {
+      margin-bottom: 15px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .ql-editor {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      height: 150px;
+      margin-bottom: 15px;
+      transition: border-color 0.3s ease;
+
+      &:hover,
+      &:focus {
+        border-color: #008cba;
+      }
+    }
+
+    .--my {
+      width: 100%;
+      text-align: center;
+    }
+
+    .--btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.--btn-primary {
+        background-color: #008cba;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+          background-color: #005c7a;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .add-product {
+    form {
+      flex-direction: column;
+
+      input[type="text"],
+      input[type="file"],
+      textarea {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

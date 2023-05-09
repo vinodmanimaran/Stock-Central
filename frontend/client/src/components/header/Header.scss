@@ -1,0 +1,56 @@
+.header {
+    padding: 1rem;
+background: linear-gradient(to bottom, #ff8c00, #ff0080);
+    .--flex-between {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 1.5rem;
+
+        .--fw-thin {
+            font-weight: 300;
+        }
+
+        .--color-danger {
+            color: #f1f1f1;
+        }
+    }
+
+    hr {
+        margin: 1rem 0;
+        border: none;
+        border-top: 1px solid #ccc;
+    }
+
+    button.--btn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 0.25rem;
+        border: none;
+        cursor: pointer;
+
+        &.--btn-danger {
+            background-color: #FF4136;
+            color: #fff;
+        }
+    }
+
+    /* media query for screens smaller than 768px */
+    @media (max-width: 768px) {
+        padding: 0.5rem;
+
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        button.--btn {
+            padding: 0.5rem;
+            font-size: 0.875rem;
+        }
+    }
+}
