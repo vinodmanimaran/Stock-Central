@@ -9,6 +9,8 @@ import { loginUser, validateEmail } from "../../services/authService";
 import { SET_LOGIN, SET_NAME } from "../../redux/features/auth/authSlice";
 import Loader from "../../components/loader/Loader";
 
+
+
 const initialState = {
   email: "",
   password: "",

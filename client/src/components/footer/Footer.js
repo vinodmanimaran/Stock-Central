@@ -16,16 +16,20 @@ const Footer = () => {
           <h3 className="footer__title">Useful Links</h3>
           <ul className="footer__list">
             <li className="footer__item">
-              <a href="#" className="footer__link">About Us</a>
+              <button type="button" className="footer__link">About Us</button>
             </li>
             <li className="footer__item">
-              <a href="#" className="footer__link">Contact Us</a>
+              <button type="button" className="footer__link">Contact Us</button>
             </li>
             <li className="footer__item">
-              <a href="#" className="footer__link">Terms and Conditions</a>
+              <button type="button" className="footer__link">
+                Terms and Conditions
+              </button>
             </li>
             <li className="footer__item">
-              <a href="#" className="footer__link">Privacy Policy</a>
+              <button type="button" className="footer__link">
+                Privacy Policy
+              </button>
             </li>
           </ul>
         </div>
@@ -33,19 +37,19 @@ const Footer = () => {
           <h3 className="footer__title">Follow Us</h3>
           <ul className="footer__social-list">
             <li className="footer__social-item">
-              <a href="#Facebook" className="footer__social-link">
+              <button type="button" className="footer__social-link">
                 <FaFacebookF />
-              </a>
+              </button>
             </li>
             <li className="footer__social-item">
-              <a href="#Twitter" className="footer__social-link">
+              <button type="button" className="footer__social-link">
                 <FaTwitter />
-              </a>
+              </button>
             </li>
             <li className="footer__social-item">
-              <a href="#instagram" className="footer__social-link">
+              <button type="button" className="footer__social-link">
                 <FaInstagram />
-              </a>
+              </button>
             </li>
           </ul>
         </div>

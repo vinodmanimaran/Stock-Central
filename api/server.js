@@ -17,12 +17,13 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(
-  cors({
-    origin: ["http://localhost:3000", ""],
+app.use (
+  cors ({
+    origin: ['http://localhost:3000'],
     credentials: true,
   })
 );
+
 
 app.use("/uploads",express.static(path.join(__dirname, "uploads")));
 
@@ -44,7 +45,7 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     app.listen(PORT, () => {
-      console.log(`Server Running on port ${PORT}`);
+      console.log(`Server Running on port ${PORT}`)
     });
   })
-  .catch((err) => console.log(err))
+  .catch((err) => console.log(err));
