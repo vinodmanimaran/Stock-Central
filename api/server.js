@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use (
   cors ({
-    origin: ['https://stockcentral.netlify.app/',"http://localhost:3000/"],
+    origin: ["http://localhost:3000"],
     credentials: true,
   })
 );
