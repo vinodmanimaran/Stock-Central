@@ -107,7 +107,7 @@ exports.handleEmailSubmit = async (req, res, next) => {
     });
     await token.save ();
 
-    const resetUrl = `http://localhost:5000/reset/${token.token}`;
+    const resetUrl = `https://stockcentral.netlify.app/reset/${token.token}`;
 
     // Send email with password reset link
     console.log (
