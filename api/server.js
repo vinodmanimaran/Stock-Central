@@ -1,4 +1,4 @@
-const dotenv = require("dotenv").config();
+const dotenv = require("dotenv");
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -10,6 +10,8 @@ const errorHandler = require("./middleWare/errorMiddleware");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 
+dotenv.config();
+
 const app = express();
 
 // Middlewares
@@ -17,15 +19,14 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use (
-  cors ({
-    origin: ["http://localhost:3000"],
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://stockcentral.netlify.app/"],
     credentials: true,
   })
 );
 
-
-app.use("/uploads",express.static(path.join(__dirname, "uploads")));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Routes Middleware
 app.use("/api/users", userRoute);
@@ -39,13 +40,14 @@ app.get("/", (req, res) => {
 
 // Error Middleware
 app.use(errorHandler);
+
 // Connect to DB and start server
 const PORT = process.env.PORT || 5000;
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     app.listen(PORT, () => {
-      console.log(`Server Running on port ${PORT}`)
+      console.log(`Server Running on port ${PORT}`);
     });
   })
   .catch((err) => console.log(err));
