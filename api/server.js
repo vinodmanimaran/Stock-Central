@@ -1,4 +1,4 @@
-const dotenv = require("dotenv");
+// ...
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -21,10 +21,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://stockcentral.netlify.app/"],
+    origin: ["http://localhost:3000", "https://stockcentral.netlify.app"],
     credentials: true,
   })
 );
+
+// Add the Access-Control-Allow-Origin header
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "https://stockcentral.netlify.app");
+  next();
+});
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
